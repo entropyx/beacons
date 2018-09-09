@@ -12,12 +12,12 @@ class ScanDelegate(DefaultDelegate):
 
 
 
-scanner = Scanner().withDelegate(ScanDelegate())
+scanner = Scanner(1).withDelegate(ScanDelegate())
 devices = scanner.scan(10.0)
 
 
 def calculateDistance(rssi):
-   txPower = -59
+   txPower = -4
    if rssi == 0:
        return -1
    else:
